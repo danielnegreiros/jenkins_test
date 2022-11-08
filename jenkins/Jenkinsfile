@@ -11,7 +11,8 @@ pipeline {
 
            steps {
                 dir ("./ansible"){
-                    sh 'ansible-playbook ./playbook.yml'
+                    ansiblePlaybook colorized: true, credentialsId: 'wsl_ssh', disableHostKeyChecking: true, playbook: 'playbook.yml',  vaultCredentialsId: 'ansible_vault'
+                    // sh 'ansible-playbook ./playbook.yml'
                 }
             }
         }
