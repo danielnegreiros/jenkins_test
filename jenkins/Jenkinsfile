@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        docker { image 'ansible' }
+        docker {
+            image 'ansible'
+            args '-u root:sudo'
+         }
     }
 
     stages {
