@@ -5,7 +5,7 @@ pipeline {
         stage("Build") {
 
            steps {
-                dir("jenkins_test") {}
+                dir("./jenkins_test") { sh 'pwd' }
                 ansiblePlaybook disableHostKeyChecking: true, installation: 'Ansible', playbook: 'ansible/playbook.yml'
             }
         }
