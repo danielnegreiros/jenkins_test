@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'ansible'
-            args '-u root:sudo'
+            args '-u root'
          }
     }
 
