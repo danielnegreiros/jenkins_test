@@ -6,8 +6,8 @@ pipeline {
 
            steps {
                 dir("./jenkins_test") {
-                    sh 'ls -lhtr ansible/playbook.yml'
-                    ansiblePlaybook disableHostKeyChecking: true, playbook: 'ansible/playbook.yml'
+                    sh 'ls -lhtr ./jenkins_test/ansible/playbook.yml'
+                    ansiblePlaybook disableHostKeyChecking: true, playbook: './jenkins_test/ansible/playbook.yml'
                  }
 
             }
