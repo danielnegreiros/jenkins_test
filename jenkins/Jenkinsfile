@@ -2,15 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World 2'
-            }
-        }
         stage("Build") {
+
            steps {
+                dir("jenkins_test")
                 ansiblePlaybook disableHostKeyChecking: true, installation: 'Ansible', playbook: 'ansible/playbook.yml'
-            }    
+            }
         }
     }
 }
