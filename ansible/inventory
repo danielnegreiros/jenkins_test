@@ -1,5 +1,2 @@
-[localhost]
+[all]
 localhost
-
-[localhost:vars]
-ansible_connection = local
