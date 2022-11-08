@@ -8,7 +8,7 @@ pipeline {
 
            steps {
                 dir ("./ansible"){
-                    ansiblePlaybook disableHostKeyChecking: true, playbook: './playbook.yml'
+                    ansiblePlaybook disableHostKeyChecking: true, installation: 'Ansible', playbook: './playbook.yml'
                 }
             }
         }
