@@ -5,9 +5,7 @@ pipeline {
         stage("Build") {
 
            steps {
-                sh 'tree'
-                // ansiblePlaybook disableHostKeyChecking: true, playbook: './jenkins_test/ansible/playbook.yml'
-
+                ansiblePlaybook disableHostKeyChecking: true, playbook: './ansible/playbook.yml'
             }
         }
     }
