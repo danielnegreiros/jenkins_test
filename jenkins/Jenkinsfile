@@ -7,7 +7,7 @@ pipeline {
         stage("Build") {
 
            steps {
-                sh 'tree'
+                sh 'ls -lhtr'
                 ansiblePlaybook disableHostKeyChecking: true, playbook: './ansible/playbook.yml'
             }
         }
